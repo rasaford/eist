@@ -1,0 +1,77 @@
+\documentclass[a4paper, 10pt]{article}
+    \usepackage[subpreambles=true]{standalone}
+    \usepackage[english, american, british]{babel}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage{hyphenat}
+    \hyphenation{Mathe-matik wieder-gewinnen}
+    \usepackage{amsmath}
+    \usepackage{import}
+    \usepackage[margin=2cm ]{geometry}
+
+    \title{Einführung in die Softwaretechnik 2018 \\ Sheet 01}
+    \author{Maximilian Frühauf}
+
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+	\item
+	      A functional model describes all the actions the system is
+	      able to perform. They can be further refined by in the Use Case diagram.
+
+	      An object model defines the structure of the system.
+	      It represents all the required components to implement the functional Model
+	      as separate objects, to make the problemset conform to an Object Oriented Programming language.
+
+	      The dynamic model describes the reaction of the system to inputs given by the
+	      user. As well as the flow of these events through the system.
+	\item
+	      Software development is difficult, because the problemset to solve is
+	      usually not well defined and has to get clarified with the client.
+	      This issue made more severe by the immense freedom offered within the discipline of
+	      software engineering because every problem can be approached in many different and often incompatible ways.
+	      Therefore the amount of possibilities for a given solution is extremely large.
+
+	      Another issue is presented by the fact that software development has to be
+	      done in teams and therefore introduces team management issues, like communication
+	      difficulties to the process.
+	\item
+	      Change is inevitable in the software development process because usually not all
+	      the requirements of the finished product get defined from the start. Therefore changes have
+	      to get made during the development cycle.
+
+	      In my own experience the most common type of changes are those of requirements.
+	      This was most apparent when I previously worked on a student project with a few friends.
+	      We started the project with only loosely defined our goals and a very rough feature set
+	      in the beginning and continued to iterate as we went further along in the development cycle.
+	      Therefore we had to change the requirements to our product on a continuous basis.
+
+	      This process also brought with it a lot of technological changes, via the libraries and tools we
+	      were using as the chosen project domain was new to all of us. Whenever we hit a wall with any given strategy
+	      we had to find another solution and shift the technology stack to accommodate the current requirements.
+
+	      Although we did experience all these changes during the project, we did not have many organizational changes.
+	      We kept the hierarchy flat and distributes all tasks among the team member who had the most
+	      available free time at the moment.
+	\item
+	      Modeling is a process done before, or during the development of the
+	      actual source code. It describes the project on a higher level and discusses
+	      different methods of implementing certain required features.
+
+	      In contrast programming can also concern itself with some level of modelling a problem, but
+	      is more focused on the actual implementation as it is usually expressed in a lower level language than
+	      the modelling process.
+	\item
+		A Model is an abstraction of a problem. By ignoring some of it's intricate details, models help in dealing
+		with complexity.
+
+		A System is a set of different parts that communicate with each other. It can be described by many individual models, 
+		that focus on the parts that comprise the system. All these Models combined are then called the system model. 
+
+		Because a system model or even a single model can get very complicated views are introduced. They allow one to focus 
+		only on a specific part of a model to limit the needed mental capacity for understanding a given model.
+		Views do not have to be limited to a singe model but can rather, combine parts of any number of different abstractions.
+		Therefore it is also possible for Views to overlap in the domain they represent.
+\end{enumerate}
+\end{document}
