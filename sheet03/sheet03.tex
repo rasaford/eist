@@ -102,12 +102,14 @@
         Entry Conditions & The game has started and the two cars intersect each other. \\
         \hline
         Flow of Events & 
-        It is evaluated weather or not the two cars involved in the collision
-        intersect each other. If they do the \( evaluate() \)  method is called on the Collision object. 
-        Depending of the speed of the cars involved in the collision a winner is chosen. The faster car wins
-        and the loser car is crunched.
-        -- crash sound
-        -- notify
+        \begin{enumerate}
+            \item Depending on the speed of the two cars a winner of the collision is chosen. This
+            is the faster of the two cars.
+            \item The loser car gets crunched.
+            \item The crash sound is played.
+            \item A notification is printed to the console if the player car was the loser in the collision. 
+            Otherwise the NPC (non-player car) is crunched and the player continues driving in the arena.
+        \end{enumerate}
         \\
         \hline
         Exit Conditions & If a winner of the collision has been determined the Condition is exited. \\
