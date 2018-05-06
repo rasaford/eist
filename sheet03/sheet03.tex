@@ -105,9 +105,12 @@
         \begin{enumerate}
             \item Depending on the speed of the two cars a winner of the collision is chosen. This
             is the faster of the two cars.
-            \item The loser car gets crunched.
             \item The crash sound is played.
+            \item The loser car gets crunched.
             \item A notification is printed to the console if the player car was the loser in the collision. 
+            \item If no other NPC car is still driving in the arena a notification is printed, telling the player
+            that he has won the game.
+         
             Otherwise the NPC (non-player car) is crunched and the player continues driving in the arena.
         \end{enumerate}
         \\
@@ -129,11 +132,14 @@
         The <<extends>> stereotype is used to separate functionality from a use case
         that is only rarely called but still has to be separate from the main use case.
 
-        This difference can be seen in the \textit{Start Game} use case. Here the use case 
-        \textit{choose car type} is connected with an <<extends>> relationship because the 
-        player has the option to choose another car but is not forced to do so. 
+        This difference can be seen in the \textit{Steer Car} use case. Here the use case 
+        \textit{no user input} is connected with an <<extends>> relationship because if
+        the player does not give any user input once the game starts, a default 
+        direction has to be chosen to steer the car in. Therefore the \textit{no user input}
+        use case is only rarely invoked and extends the Steer Car use case.
+
         The use case \textit{play music} however is connected with an <<includes>> stereotype 
-        because the music is always played once the car starts, but it can also be used by
+        because the music is always played once the game starts, but it can also be used by
         other use cases. 
     \item Difference between \textbf{aggregation} and \textbf{composition}:
         Aggregation is used to convey that one object consists of the parts of another object.
