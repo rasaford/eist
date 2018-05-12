@@ -19,19 +19,19 @@
 \begin{enumerate}
     \item Dynamic behavior:
 
-    \includegraphics[width=10cm]{StateChart.pdf}
+    \includegraphics[width=\linewidth]{StateChart.pdf}
 
     \item Taxonomy for the car shield use case:
 
-    \includegraphics[width=10cm]{ClassDiagram.pdf}
+    \includegraphics[width=\linewidth]{ClassDiagram.pdf}
 
     \item Win Collision activity diagram:
 
-    \includegraphics[width=10cm]{ActivityDiagram.pdf}
+    \includegraphics[width=\linewidth]{ActivityDiagram.pdf}
 
     \item Collision detection algorithm communication diagram:
 
-    \includegraphics[width=10cm]{CommunicationDiagram.pdf}
+    \includegraphics[width=\linewidth]{CommunicationDiagram.pdf}
 
     \item 
         Coupling measures the dependency between different subsystems inside a project.
@@ -48,6 +48,12 @@
         These terms can be used to describe a good system design, as a good system should have 
         high cohesion and low coupling between the different submodules.
 
-        // TODO: example
+        An Example of this would be the \textit{car} package in the Bumpers game. Here Cohesion is used between 
+        the different car types in the form of inheritance. This provides a close relationship between the 
+        different objects and ensures that the participating classes are concerned with only a single 
+        purpose, the details of modeling a car.
+
+        A low coupling is then used to connects this \textit{car} package to the other subsystems of the game.
+
 \end{enumerate}
 \end{document}
