@@ -1,0 +1,54 @@
+\documentclass[a4paper, 10pt]{article}
+    \usepackage[subpreambles=true]{standalone}
+    \usepackage[english, american, british]{babel}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage{hyphenat}
+    \hyphenation{Mathe-matik wieder-gewinnen}
+    \usepackage{amsmath}
+    \usepackage{import}
+    \usepackage{tabularx}
+    \usepackage{graphicx}
+    \usepackage{makecell}
+    \usepackage{verbatim}
+    \usepackage[margin=1cm ]{geometry}
+
+    \title{Einführung in die Softwaretechnik 2018 \\ Sheet 08}
+    \author{Maximilian Frühauf}
+
+\begin{document}
+\maketitle
+\begin{enumerate}
+    \item Use the Pattern Model (introduced in Lecture 08, slides 47ff) to describe the Bridge Pattern (see Lecture 06, slides 83ff).
+    \vspace{0.5cm}
+
+    \begin{itemize}
+        \item \textbf{Pattern Name:} Bridge Pattern
+        \item \textbf{Problem:} Many design decisions have to me made final at design time (“design window”) or at compile time
+        as different abstractions can not be exchanged at runtime.
+        \item \textbf{Context:} Different Clients need to choose different implementations at runtime.
+        \item \textbf{Forces:} Delay the binding between an interface and its subclass to the runtime time of the system.
+        \item \textbf{Solution:} 
+        \begin{itemize}
+            \item Extract different implementations into separate classes Called \textit{Concrete Implementor}
+            \item Define an interface to all of the \textit{Concrete Implementor} classes as \textit{Implementation}. 
+            Implementation services are exposed via the \verb+OperationImpl()+ Method.
+            \item The Client chooses a Specific \textit{Refined Abstraction} which all are a subclass of the interface
+            \textit{Abstraction}. 
+            \item This \textit{Refined Abstraction} then chooses one of the \textit{Concrete Implementor}s in the Solution Domain
+        \end{itemize}
+        \item \textbf{Benefits:}
+        \begin{itemize}
+            \item A new Implementation can be added without modifying the Abstraction or the Client.
+            \item Implementations can be chosen dynamically at runtime.
+        \end{itemize}
+        \item \textbf{Consequences:} \begin{itemize}
+            \item Client is not aware of the detailed concrete Implementations.
+            \item The different Abstractions decide which concrete Implementation to use at runtime.
+        \end{itemize}
+        \item \textbf{Follow-On Problems(s):} \begin{itemize}
+            \item If many classes get added as Abstractions or Implementations the pattern will get confusing as many classes have to be considered.
+        \end{itemize}
+    \end{itemize}
+\end{enumerate}
+\end{document}

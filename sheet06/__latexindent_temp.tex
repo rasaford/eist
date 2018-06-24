@@ -1,0 +1,80 @@
+\documentclass[a4paper, 10pt]{article}
+    \usepackage[subpreambles=true]{standalone}
+    \usepackage[english, american, british]{babel}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage{hyphenat}
+    \hyphenation{Mathe-matik wieder-gewinnen}
+    \usepackage{amsmath}
+    \usepackage{import}
+    \usepackage{tabularx}
+    \usepackage{graphicx}
+    \usepackage{makecell}
+    \usepackage[margin=2cm ]{geometry}
+
+    \title{Einführung in die Softwaretechnik 2018 \\ Sheet 06}
+    \author{Maximilian Frühauf}
+
+\begin{document}
+\maketitle
+\begin{enumerate}
+    \item You are designing the access control mechanism for a web-based retail store. 
+    Customers browse product information, update their profile, and purchase products. 
+    Suppliers can add new products, update product information, and create, process, and examine orders. 
+    The store administrator sets the retail prices, makes tailored offers to customers based on their purchasing profiles, 
+    and provides marketing services. You have to deal with four actors: StoreAdministrator, Supplier, 
+    registered Customer, and unregistered WebUser. Design an access control mechanism for all actors. 
+    Customers are already registered. Suppliers need to be registered by the StoreAdministrator. 
+    Unregistered web users can only get information about the product and can register by creating the customer info.
+
+    \vspace{0.5cm}
+
+    \begin{table}[h!]
+        \centering
+        \begin{tabular}{| m{2cm} || c | c | c | c | c | }
+            \hline
+            Actors / Objects & Product & Order & Offer & customer info& Marketing\\
+            \hline
+            \hline
+            Store Administrator & \makecell{set retail Price} & & make offer &  read customer info& provide marketing services \\
+            \hline 
+            Supplier & \makecell{<<create>> \\ add product \\ update product info } &  & &  & \\
+            \hline 
+            registered Customer & \makecell{browse product information  \\ purchase product} &  & & update profile & \\
+            \hline 
+            unregistered WebUser & browse product information &  && \makecell{<<create>> \\ register user} &\\ 
+            \hline 
+        \end{tabular}
+    \end{table}
+    \item
+    Given the following sentences, which inheritance mechanisms (specification or implementation inheritance) would be appropriate?
+    \begin{itemize}
+        \item A Rectangle class inherits from a Polygon class.
+        \item A Set class inherits from an existing BinaryTree class.
+        \item A Set class inherits from a Bag class (a Bag is defined as an unordered collection).
+        \item A Player class inherits from a User class.
+    \end{itemize}
+    \vspace{0.5cm}
+    \item Consider a workflow system supporting software developers. 
+    The system enables managers to model the process the developers should follow in 
+    terms of processes and work products. The manager assigns specific processes to each developer and sets deadlines 
+    for the delivery of each work product. The system supports several types of work products: 
+    formatted text, pictures, and URLs. The manager, while editing the workflow, can dynamically set each 
+    work product’s type at run-time. 
+    Assuming one of your design goals is to design the system so that more work product types can be added in the future, 
+    which design pattern would you use to represent work products? 
+    Justify your choice and model this design pattern using a UML class diagram.
+    \vspace{0.5cm}
+    \item
+    A server offers a method to perform an encryption. 
+    A variety of clients can use this method. At run-time, 
+    the server application selects the AES or DES encryption algorithm. 
+    AES supports a variety of key lengths with 128, 192, to 256-bit, whereas DES only supports 56-bit keys. 
+    The server has to deal with clients that require backward compatibility and clients that require high security. 
+    Draw a UML class diagram depicting the classes and methods, and explain your model.
+    \vspace{0.5cm}
+    \item
+    Explain the differences between inheritance and delegation. 
+    \vspace{0.5cm}
+\end{enumerate}
+\end{document}
