@@ -1,0 +1,113 @@
+\documentclass[a4paper, 10pt]{article}
+    \usepackage[subpreambles=true]{standalone}
+    \usepackage[english, american, british]{babel}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage{hyphenat}
+    \hyphenation{Mathe-matik wieder-gewinnen}
+    \usepackage{amsmath}
+    \usepackage{import}
+    \usepackage{tabularx}
+    \usepackage{graphicx}
+    \usepackage{makecell}
+    \usepackage{verbatim}
+    \usepackage{tabularx}
+    \usepackage[margin=1cm ]{geometry}
+
+    \title{Einführung in die Softwaretechnik 2018 \\ Sheet 09}
+    \author{Maximilian Frühauf}
+
+\begin{document}
+\maketitle
+\begin{enumerate}
+    \item Explain at least 6 (in total) advantages and disadvantages of Scrum in your
+    own words. Provide an example for each advantage / disadvantage.
+    \vspace{0.5cm}
+
+    \begin{itemize}
+        \item Advantages
+    \begin{itemize}
+        \item Fast iteration times
+
+            As each sprint is further divided in to several smaller daily sprints, 
+            it is possible to quickly iterate on an existing backlog item, if changes turn out to 
+            be necessary. This can happen because either a better solution is found during a sprint, 
+            or because the requirements of the project change. 
+
+            Scrum allows for this because after every sprint the backlog is adjusted by the Scrum Team members
+            and the Scrum Master. 
+            This can for example be seen in the development of the bumpers game. Here after we implemented the 
+            additional display components, we had to exchange these for a newer version with the \verb+AnalogSpeedometer+.
+            
+        \item No dependency between different stages of development
+
+            As each backlog item is self contained, Scrum does not model any dependencies between the 
+            different stages of the development process. This is in contrast to, for example the waterfall model.
+
+            Therefore it is possible to prioritize certain items in the backlog if it becomes necessary. 
+            This allows Scrum to be more accepting of changes to the development process itself.
+            An example here would be any development cycle in Scrum. If large changes have to be made, it will get
+            necessary to update the models of the system from the Analysis phase. This can be easily done in the Scrum process.
+        \item Potentially shippable product increments
+
+            After each sprint the result is a potentially shippable product increment, that can be sent to 
+            the client for evaluation.
+            This allows the client to see the current progress of the development team.
+            We saw an example of this in the development of Bumpers, as after every sprint we had produced a
+            shippable product increment in the shape of our submission to the Artemis platform.
+
+    \end{itemize}
+        \item Disadvantages
+        \begin{itemize}
+        \item Many Meetings
+
+        Scrum requires more meetings between all the participants of the project than for example the waterfall model. 
+
+        \item Unclear project completion time
+
+        Because Scrum is modeled in cycles a manager cannot as easily as for example in the waterfall model estimate the 
+        completion time of the project.
+
+        \item Complexity of the lifecycle model
+
+        Scrum is a more complex model to understand and apply than for example the waterfall of V-Model. Therefore the 
+        adoption rate is lower.
+        \end{itemize}
+    \end{itemize}
+    
+    \item Name and explain 2 similarities and 2 differences between the Unified
+    Process and Scrum.
+    \vspace{0.5cm}
+
+    \begin{itemize}
+        \item Similarities
+        \begin{itemize}
+            \item Cyclic model
+
+            Both Unified Process and Scrum are modeled in Cycles. This means that stages of the process repeat and changes can be 
+            made to existing work products.
+            \item Incremental design 
+
+            Scrum and Unified Process divide the process of software engineering into smaller, more manageable parts. 
+            This makes the large concept of developing a system more manageable and allows for better planning of the development process
+            as each small part is easier to estimate for. 
+        \end{itemize}
+
+        \item Differences
+        \begin{itemize}
+            \item Concept of stages
+
+            Unified Process splits the Development process into two distinct stages. The Engineering focusing on design and synthesis of concepts 
+            and Production stage, which focuses on construction testing and deployment of the product. 
+            This distinction is not made within Scrum, where each part of the process is modeled the same way as a sprint.
+            \item Handling of frequent change
+
+            Even though Unified Process is a cyclic model it is still build on the iterative idea of stages consisting of distinct phases. 
+            Therefore it takes some time to process a change in requirements for the project and propagate these to the actual product itself.
+
+            As Scrum is organized in daily and approximately weekly sprints, change of any type can be easily integrated into the development process 
+            by changing the backlog items for the next Sprint. 
+        \end{itemize}
+    \end{itemize}
+\end{enumerate}
+\end{document}

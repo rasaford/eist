@@ -1,0 +1,69 @@
+\documentclass[a4paper, 10pt]{article}
+    \usepackage[subpreambles=true]{standalone}
+    \usepackage[english, american, british]{babel}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage{hyphenat}
+    \hyphenation{Mathe-matik wieder-gewinnen}
+    \usepackage{amsmath}
+    \usepackage{import}
+    \usepackage{tabularx}
+    \usepackage{graphicx}
+    \usepackage{makecell}
+    \usepackage{verbatim}
+    \usepackage{tabularx}
+    \usepackage[margin=1cm]{geometry}
+
+    \title{Einführung in die Softwaretechnik 2018 \\ Sheet 10}
+    \author{Maximilian Frühauf}
+
+\begin{document}
+\maketitle
+\begin{enumerate}
+    \item You are working in a new team with unexperienced developers. 
+    Your new colleague Bob wants to share his changes using git. 
+    However, other developers cannot find the changes. 
+    Explain 3 typical reasons for this problem. Explain for each reason how the problem could be solved.
+    \vspace{0.5cm}
+    
+    \begin{itemize}
+        \item The changes have not been added to the staging area. Any change has to be added to the 
+        git staging area with the \verb+git add <FILE>+ command.
+
+        \item The changes have not been commited. Any staged changes have to be commited to the version 
+        control system (git) this packages them up as a single unit and creates a separate version from these files.
+        Any further changes to this version are prohibited.
+        
+        Changes can be commited with the \verb+git commit -m "commit message"+ command.
+        \item The changes have not been pushed. After changes have been commited they are still local to 
+        Bob's computer. For the other developers to see them, they have to be commited to the central
+        version control server.
+
+        This can be done with the \verb+git push origin+ command.
+    \end{itemize}
+
+    \item
+    After you have explained how to share the changes, Bob has a merge conflict. 
+    Explain why this merge conflict could have happened. 
+    Further, explain how to prevent such merge conflicts in the future in your own words using 
+    best practices for distributed version control. 
+    \vspace{0.5cm}
+
+    A merge conflict can happen if multiple commits change the same parts of a file and push the changes to the remote server.
+    Then git cannot find a definite ordering for both commits.
+    Therefore it is up to Bob to manually select the right changes.
+    After the desired changes have been selected, a merge commit is created, merging the two diverged branches 
+    back into one. 
+
+    A merge conflict can be prevented by separating the logical parts of a system into separate files.
+    Then if parts of a system have to be changed, these changes stay local to the corresponding files and 
+    git can automatically merge the commits. However this is only possible if the developers on the team
+    stick to the convention of handling one feature at a time.
+
+    \item The following figure shows an informal model of the build and release management workflow. 
+    How would you model this as an object model?
+    \vspace{0.5cm}
+
+    Solution on Artemis.
+\end{enumerate}
+\end{document}
